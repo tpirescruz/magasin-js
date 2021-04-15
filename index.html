@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>09 - Magasin - Tom Pires Cruz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="outer-round-title">
+            <div class="round-title">
+                <h1>.magasin</h1>
+                <hr class="hr1">
+                <hr class="hr2">
+                <hr class="hr3">
+                <hr class="hr4">
+            </div>
+        </div>
+        <form class="form-container">
+            <div class="form-row">
+                <div class="form-section">
+                    <label for="petite-ration"> Petite ration <span class="price"> 2$</span> 🍰</label>
+                    <div class="input-buttons-plus">
+                        <a class="minus quantity">-</a>
+                        <input onchange="calculTotal();stotal();equilibre();tooMuch()" class="input-test"
+                            id="petite-ration" type="number" value=0 min=0>
+                        <a class="plus quantity">+</a>
+                    </div>
+                    <p class="stotal" id="stotalpr"></p>
+                </div>
+                <div class="form-section">
+                    <label for="grosse-ration"> Grosse ration <spa class="price"> 8$</span> 🎂</label>
+                    <div class="input-buttons-plus">
+                        <a class="minus quantity">-</a>
+                        <input onchange="calculTotal();stotal();tooMuch()" class="input-test" id="grosse-ration"
+                            type="number" value=0 min=0>
+                        <a class="plus quantity">+</a>
+                    </div>
+                    <p class="stotal" id="stotalgr"></p>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-section">
+                    <label for="sword">Epée<span class="price"> 20$</span>🗡</label>
+                    <div class="input-buttons-plus">
+                        <a class="minus quantity">-</a>
+                        <input onchange="calculTotal();stotal();tooMuch()" class="input-test" id="sword" type="number"
+                            value=0 min=0>
+                        <a class="plus quantity">+</a>
+                    </div>
+                    <p class="stotal" id="stotalsw"></p>
+                </div>
+                <div class="form-section">
+                    <label for="shield">Bouclier<span class="price"> 15$</span> 🛡</label>
+                    <div class="input-buttons-plus">
+                        <a class="minus quantity">-</a>
+                        <input onchange="calculTotal();stotal();tooMuch()" class="input-test" id="shield" type="number"
+                            value=0 min=0>
+                        <a class="plus quantity">+</a>
+                    </div>
+                    <p class="stotal" id="stotalsh"></p>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-section">
+                    <label for="potion">Potion<span class="price"> 5$</span> 🧪</label>
+                    <div class="input-buttons-plus">
+                        <a class="minus quantity">-</a>
+                        <input onchange="calculTotal();stotal();tooMuch()" class="input-test" id="potion" type="number"
+                            value=0 min=0>
+                        <a class="plus quantity">+</a>
+                    </div>
+                    <p class="stotal" id="stotalp"></p>
+                </div>
+                <div class="form-section">
+                    <label for="cloth">Sac de toile<span class="price"> 1$</span> 🛍</label>
+                    <div class="input-buttons-plus">
+                        <a class="minus quantity">-</a>
+                        <input onchange="calculTotal();stotal();tooMuch()" class="input-test" id="cloth" type="number"
+                            value=0 min=0>
+                        <a class="plus quantity">+</a>
+                    </div>
+                    <p class="stotal" id="stotalc"></p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="clear-btn" onclick="this.form.reset()">Vider</button>
+            </div>
+        </form>
+        <div class="button-container">
+            <button onclick="calculTotal();stotal();tooMuch()">Calculer</button>
+        </div>
+        <div class="total-container">
+            <div class="total">
+                <p>Prix total:</p>
+                <hr>
+                <p id="totalPrice"></p>
+            </div>
+            <div class="total">
+                <p>Nb d'items:</p>
+                <p id="totalItems"></p>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

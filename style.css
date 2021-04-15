@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}*/
+
+.round-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:200px;
+    height:200px;
+    border: 3px solid white;
+    border-radius: 100px ;    
+    filter: drop-shadow(0px 0px 3px white);
+    animation: counter-rotation 21s infinite linear;
+
+}
+.outer-round-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:215px;
+    height:215px;
+    border: 5px white;
+    border-style: dotted;
+    border-radius: 150px ;    
+    filter: drop-shadow(0px 0px 3px white);
+    animation: rotation 21s infinite linear;
+
+}
+
+.hr1 {
+    color: white;
+    height: 2px;
+}
+
+.hr2 {
+    animation: wiggle 1s infinite linear;
+    margin-top: 15px;
+    margin-left: 20px;
+    color:white;
+    height: 2px ;
+    width: 130px;
+}
+
+.hr3 {
+    animation: wiggle 3s infinite linear;
+    margin-top: 15px;
+    margin-left: 90px;
+    color:white;
+    height: 2px ;
+    width: 70px;
+}
+
+.hr4 {
+    animation: wiggle 4s infinite linear;
+    margin-top: 15px;
+    margin-left: 80px;
+    color:white;
+    height: 2px ;
+    width: 30px;
+}
+
+h1 {
+    animation: pulse 1s infinite alternate;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 1%;
+}
+
+main {
+    background: linear-gradient(#6d0083, #418beb) ;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;   
+    box-shadow: 1px 2px 6px black;
+    /*width: 60%;
+    border-radius: 20px;*/
+}
+.form-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+label {
+    color: white;
+}
+
+.price{
+    color: rgb(201, 201, 201);
+}
+
+.form-row {
+    width: 90%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2% ;
+}
+
+
+input {
+    font-size: 13px;
+    height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    border: white;
+    box-shadow: 1px 1px 5px #4d1e79;
+}
+.stotal {
+    color: white;
+}
+
+.button-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    text-align: center;
+    font-size: 12px;
+    font-weight:800;
+    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: white;
+    border-radius:20px;
+    border: white;
+    color: #418beb;
+}
+
+.clear-btn {
+    margin-bottom: 3%;
+    color:white;
+    background: none;
+    border: white solid 2px;
+}
+
+button:hover {
+    transition: 0.4s;
+    filter: drop-shadow(7px 7px 2px #4d1e79);
+}
+
+.total-container {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.total hr {
+    color: white;
+}
+
+.total {
+    color: white;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background: none;
+    border: white solid 2px;
+    filter: drop-shadow(0px 0px 3px white);
+}
+
+#totalItems {
+    font-size: 30px;
+}
+
+#totalPrice {
+    font-size: 25px;
+    filter: drop-shadow(0px 0px 0px white);
+}
+
+.input-buttons-plus a{
+    margin: 0px 10px;
+    font-size: 21px;
+    cursor: pointer;
+    padding:  5px 25px;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 20px;
+}
+.input-buttons-plus{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.minus{
+    color: green;
+}
+.minus:hover{
+    color: white;
+    background-color: green;
+    transition: 0.4s;
+    filter: drop-shadow(7px 7px 2px #4d1e79);
+}
+.plus {
+    color: red;
+}
+
+.plus:hover{
+    color: white;
+    background-color: red;
+        transition: 0.4s;
+    filter: drop-shadow(7px 7px 2px #4d1e79);
+}
+.greenPrice {
+    color: green;
+
+}
+
+.orangePrice {
+    color: orange;
+
+}
+
+.redPrice {
+    color:red;
+
+}
+
+@keyframes pulse {
+    0% {
+        color: #ffffff;
+    } 
+    5% {
+        color:#ffffff00;
+    }
+    6% {
+        color: #ffffff;
+    }
+    10% {
+        color:#ffffff00;
+    }
+    11% {
+        color: #ffffff;
+    }
+    29% {
+        color: #ffffff;
+    }
+    30% {
+        color:#ffffff00;
+    }
+    31% {
+        color: #ffffff;
+    }
+    97% {
+        color:#ffffff;
+    }
+    98% {
+        color: #ffffff;
+    }
+    99% {
+        color: #00000000;
+    }
+    100% {
+        color:#ffffff;
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    
+    25% {
+      transform: translate(5px, 0);
+    }
+    
+    75% {
+      transform: translate(-5px, 0);
+    }
+  }
+
+  @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+  }
+  @keyframes counter-rotation {
+      from {
+        transform: rotate(360deg);
+      }
+
+      to {
+        transform: rotate(0deg);
+      }
+  }
